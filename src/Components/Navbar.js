@@ -1,44 +1,43 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 
+import logo from './Images/logo2.png';
+
 export class Navbar extends Component {
 
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="position-relative">
+        <img src={logo} alt="logo" className="position-absolute" style={{ height: "98px" ,top:"0px", zIndex : "2", width : "270px"}} />
+        <nav className="navbar navbar-expand-lg navbar-dark" style={{background : "black",height : "100px"}}>
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/" style={{fontStyle: "italic", fontFamily: "fangsong", fontSize: "30px"}}>NewsMonkey</Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="collapse navbar-collapse" id="navbarSupportedContent" style={{marginLeft : "250px"}}>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
+                <li className="nav-item" style={{fontSize : "18px"}}>
                   <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" style={{fontSize : "18px"}}>
                   <Link className="nav-link" to="/about">About</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" style={{fontSize : "18px"}}>
                   <Link className="nav-link" to="/business">Business</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" style={{fontSize : "18px"}}>
                   <Link className="nav-link" to="/entertainment">Entertainment</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" style={{fontSize : "18px"}}>
                   <Link className="nav-link" to="/general">General</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" style={{fontSize : "18px"}}>
                   <Link className="nav-link" to="/health">Health</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" style={{fontSize : "18px"}}>
                   <Link className="nav-link" to="/science">Science</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" style={{fontSize : "18px"}}>
                   <Link className="nav-link" to="/sports">Sports</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" style={{fontSize : "18px"}}>
                   <Link className="nav-link" to="/technology">Technology</Link>
                 </li>
                 
