@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 
 import logo from './Images/logo2.png';
 
-export class Navbar extends Component {
+import React from 'react'
 
-  render() {
-    return (
-      <div className="position-relative">
-        <img src={logo} alt="logo" className="position-absolute" style={{ height: "98px" ,top:"0px", zIndex : "2", width : "270px"}} />
+export default function Navbar() {
+  return (
+    <div className="fixed-top">
+      <img src={logo} alt="logo" className="position-absolute" style={{ height: "98px" ,top:"0px", zIndex : "2", width : "270px"}} />
         <nav className="navbar navbar-expand-lg navbar-dark" style={{background : "black",height : "100px"}}>
           <div className="container-fluid">
             <div className="collapse navbar-collapse" id="navbarSupportedContent" style={{marginLeft : "250px"}}>
@@ -46,9 +45,7 @@ export class Navbar extends Component {
             </div>
           </div>
         </nav>
-      </div>
-    )
-  }
+    </div>
+  )
 }
 
-export default Navbar

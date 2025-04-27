@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class NewsItems extends Component {
-  render() {
-    let {title,description,imageUrl,newsUrl,author,date,source} = this.props;
-    return (
-      <div>
-        <div className="my-3 d-flex justify-content-center">
+export default function NewsItems(props) {
+  let {title,description,imageUrl,newsUrl,author,date,source} =props;
+  return (
+    <div>
+      <div className="my-3 d-flex justify-content-center">
           <div className="card" style={{width: "24rem", height: "500px"}}>
             <div style={{display : "flex", position : "absolute", right : "0"}}>
               <span className="badge rounded-pill bg-danger">
@@ -22,7 +21,7 @@ export default class NewsItems extends Component {
             </div>
           </div>
         </div>
-      </div>
-    )
-  }
+    </div>
+  )
 }
+
