@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function NewsItems(props) {
   let {title,description,imageUrl,newsUrl,author,date,source} =props;
+  
   return (
     <div>
       <div className="my-3 d-flex justify-content-center">

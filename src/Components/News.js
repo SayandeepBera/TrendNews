@@ -10,18 +10,20 @@ export default function News(props) {
   const [page, setPage] = useState(1);
   const [totalArticles, setTotalArticles] = useState(0);
 
+  // Capitalize the text
   const capitalizeTitle = (str)=>{
     return str.slice(0,1).toUpperCase() + str.slice(1);
   }
 
+  // Update news function
   const updateNews = async()=> {
     props.setProgress(10);
 
     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pagesize=${props.pageSize}`;
     setLoading(true);
 
-    let data = await fetch(url);
-    let preseData = await data.json();
+    let data = await fetch(url); // fetch the data from API
+    let preseData = await data.json(); // Convert the data into json formate
     
     try {
       if (preseData.articles) {
@@ -69,11 +71,12 @@ export default function News(props) {
   return (
     <>
       <h1 className="text-center" style={{ marginBottom: "25px", marginTop : "135px" }}>
-        NewsMonkey - Top {capitalizeTitle(props.category)} Headlines
+        TrendNews - Top {capitalizeTitle(props.category)} Headlines
       </h1>
 
       {loading && <Spinner/>}
 
+      {/* Add InfiniteScroll  */}
       <InfiniteScroll
         dataLength={articles ? articles.length : 0}
         next={fetchMoreData}
