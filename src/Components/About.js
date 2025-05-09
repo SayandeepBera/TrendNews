@@ -22,6 +22,7 @@ export default function About() {
             </p>
         </div>
         
+        {/* Frequently Asked Questions (FAQs) about TrendNews */}
         <div className="accordion mt-5" id="accordionExample">
             <h4 className='mb-3'>Frequently Asked Questions (FAQs) about TrendNews</h4>
             <div className="accordion-item">
