@@ -1,5 +1,6 @@
 /* Navbar.css */
-@media (min-width: 768px) {
+ /* for desktop */
+@media (min-width: 768px) { 
     .nav-link {
         position: relative;
         color: white;
