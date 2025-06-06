@@ -50,7 +50,7 @@ export default function Navbar() {
                 ].map((item) => (
                   <li className="nav-item me-3" key={item.name} style={{ fontSize: "18px" }}>
                     <Link
-                      className={`nav-link ${location.pathname === item.path ? "active" : ""}`}
+                      className={`nav-link ${location.pathname === item.path ? "active fs-5" : ""}`}
                       to={item.path}
                     >
                       {item.name}
