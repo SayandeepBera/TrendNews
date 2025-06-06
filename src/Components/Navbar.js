@@ -1,6 +1,5 @@
 import { Link,useLocation } from "react-router-dom";
 import logo from './Images/logo2.png';
-import React from 'react';
 
 export default function Navbar() {
   const location = useLocation(); // to highlight the active link

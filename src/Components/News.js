@@ -48,7 +48,7 @@ export default function News(props) {
   
   useEffect(()=>{
     updateNews();
-    document.title=`${capitalizeTitle(props.category)} - NewsMonkey`;
+    document.title=`${capitalizeTitle(props.category)} - TrendNews`;
     // eslint-disable-next-line
   }, []);
 
